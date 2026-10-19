@@ -80,7 +80,6 @@ Danh sách trên lấy từ thiết kế KiCad. Mã đặt hàng cụ thể, đi
 
 Để mở và chỉnh sửa, tải toàn bộ repository, giải nén rồi mở `hardware/USB_UART_CH340C.kicad_pro` bằng KiCad 10 với bộ thư viện tiêu chuẩn.
 
-## Ghi chú phiên bản và chế tạo
 
 ## Quá trình thiết kế và kiểm tra
 
@@ -93,6 +92,7 @@ Trong quá trình hoàn thiện, tôi điều chỉnh thiết kế theo yêu c�
 Tôi đã trực tiếp chạy **Design Rules Checker (DRC)** trên bản PCB cập nhật ngày **19/10/2026**.
 
 **Kết quả: 0 Errors — không phát hiện lỗi theo bộ quy tắc thiết kế được cấu hình tại thời điểm kiểm tra.**
+![Kết quả kiểm tra DRC trên KiCad: 0 Errors](docs/images/pcb_project.png)
 
 Sau khi hoàn tất kiểm tra, tôi xuất các lớp Gerber và dữ liệu khoan để chuẩn bị gia công PCB.
 
