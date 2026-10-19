@@ -4,6 +4,10 @@
 
 **Trạng thái:** đã hoàn thành sơ đồ nguyên lý và bố trí PCB; đang chuẩn bị chế tạo. Chưa có kết quả kiểm thử trên phần cứng đã lắp ráp.
 
+## Sơ đồ nguyên lý
+
+![Sơ đồ CH340C theo khối chức năng](docs/images/schematic-blocks.png)
+
 ## Hình ảnh PCB
 
 ### Lớp đồng trên — F.Cu
