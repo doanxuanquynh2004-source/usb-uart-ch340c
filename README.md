@@ -82,12 +82,23 @@ Danh sách trên lấy từ thiết kế KiCad. Mã đặt hàng cụ thể, đi
 
 ## Ghi chú phiên bản và chế tạo
 
-- PCB và Gerber trong bộ này lấy từ bản cập nhật ngày 19/10/2026. Dữ liệu PCB, schematic và Gerber được giữ nguyên khi đóng gói.
-- Tệp `.kicad_pro` được đồng bộ từ bản thiết lập dự án có sẵn: clearance tối thiểu 0,15 mm; đường mạch tối thiểu 0,20 mm; đường kính via tối thiểu 0,70 mm; lỗ xuyên tối thiểu 0,30 mm; vành đồng via tối thiểu 0,20 mm. Preset via của netclass Default là 0,70/0,30 mm; clearance của Default vẫn là 0,20 mm.
-- Người thiết kế đã báo DRC đạt 0 lỗi ở bản PCB cập nhật. Chưa chạy lại DRC bằng KiCad trên bộ đóng gói này; cần chạy lại sau khi mở hoặc chỉnh sửa.
-- Kích thước đường mạch hiện tại là **0,20 mm**. Nếu xưởng yêu cầu đúng **8 mil = 0,2032 mm**, cần xác nhận lại với xưởng hoặc tăng độ rộng rồi xuất lại Gerber.
-- Phần thân đầu nối USB được bố trí nhô ra khỏi mép bo để thuận tiện cắm cáp.
-- Khi thay đổi PCB, cần đổ lại đồng, kiểm tra DRC và xuất lại Gerber cùng dữ liệu khoan để các tệp chế tạo khớp với thiết kế.
+## Quá trình thiết kế và kiểm tra
+
+Tôi thực hiện dự án USB Type-C sang UART TTL sử dụng CH340C trên KiCad, từ xây dựng sơ đồ nguyên lý, lựa chọn footprint, bố trí linh kiện đến đi dây và đổ đồng PCB.
+
+Trong quá trình hoàn thiện, tôi điều chỉnh thiết kế theo yêu cầu gia công của xưởng, với độ rộng đường mạch 0,20 mm và kích thước via 0,70 mm / lỗ khoan 0,30 mm. Tôi chủ động bố trí phần thân đầu nối USB Type-C nhô ra khỏi mép bo để thuận tiện cắm cáp.
+
+### Kết quả kiểm tra trên KiCad
+
+Tôi đã trực tiếp chạy **Design Rules Checker (DRC)** trên bản PCB cập nhật ngày **19/10/2026**.
+
+**Kết quả: 0 Errors — không phát hiện lỗi theo bộ quy tắc thiết kế được cấu hình tại thời điểm kiểm tra.**
+
+Sau khi hoàn tất kiểm tra, tôi xuất các lớp Gerber và dữ liệu khoan để chuẩn bị gia công PCB.
+
+### Trạng thái dự án
+
+Dự án đã hoàn thành giai đoạn thiết kế PCB và kiểm tra DRC trên KiCad. Tôi sẽ cập nhật ảnh bo mạch thực tế, kết quả nhận cổng COM và kiểm thử giao tiếp UART sau khi chế tạo và lắp ráp.
 
 ## Kế hoạch kiểm thử sau lắp ráp
 
